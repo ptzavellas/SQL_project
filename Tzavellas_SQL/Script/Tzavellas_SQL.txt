@@ -1,0 +1,793 @@
+
+create table Actor(
+ID VARCHAR Primary key Not Null,
+Names VARCHAR ,
+BirthDate Date ,
+OriginCountry VARCHAR);
+
+
+create table Director(
+ID VARCHAR Primary key not null,
+Names VARCHAR,
+BirthDate Date,
+OriginCountry VARCHAR);
+
+
+create table User(
+Names VARCHAR,
+Password VARCHAR,
+Email VARCHAR Primary key not null,
+Birthdate date not null ,
+Age Int );
+
+
+
+create table Category(
+ID VARCHAR primary key not null,
+Title VARCHAR not null);
+
+INSERT INTO Actor (ID, Names, BirthDate, OriginCountry) VALUES
+	('DT123', 'George Grethor', '1999-10-10', 'Germany'),
+	('KT124', 'Paul Papas', '1990-12-11', 'Cyprus'),
+	('DO125', 'Antonio Fiorini', '2005-06-12', 'Italy'),
+	('ZN126', 'Marko Alexey', '1969-01-13', 'Russia'),
+	('KI127', 'Mary Nikelson', '1955-11-14', 'USA'),
+	('LO128', 'Helen Basil', '1940-02-15', 'Great Britain'),
+	('FR129', 'Irina Sesin', '1990-04-16', 'Bulgaria'),
+	('BG130', 'Hix Niji', '1980-08-17', 'South Korea'),
+	('CD131', 'Zina Kitchin', '1989-03-18', 'Mexico'),
+	('SX132', 'Martion Papastin', '1933-03-26', 'Iran'),
+	('FV133', 'Ama Misin', '2010-07-20', 'Quatar'),
+	('GB134', 'Vivi Croper', '1999-09-21', 'Peru'),
+	('HN135', 'Sunny Klop', '2000-12-22', 'Germany'),
+	('JM136', 'Paris Spiropoulos', '1977-11-23', 'Greece'),
+	('IK137', 'Xiu Zien', '1988-10-24', 'China'),
+	('RF138', 'Nick Titos', '1959-09-25', 'Cyprus'),
+	('YH139', 'Michael Michelon', '1999-08-26', 'Azerbaitzan'),
+	('XT140', 'Gene Everton', '1999-07-27', 'USA'),
+	('CV141', 'John Hant', '1990-06-28', 'Malta'),
+	('VB142', 'Peter Peterson', '2005-05-29', 'Holland'),
+	('VP143', 'Gigi Gerard', '1969-04-01', 'France'),
+	('RT144', 'Noura Nakami', '1955-03-02', 'Japan'),
+	('DT145', 'Cathrin Konor', '1940-02-03', 'Switcherland'),
+	('EE146', 'Filip Low', '1990-01-04', 'Lithuania'),
+	('TY147', 'Tin Xigin', '1980-07-05', 'China'),
+	('JJ148', 'Chichi Fita', '1989-11-06', 'Iraq'),
+	('YH149', 'Spin Roty', '1936-12-07', 'Egypt'),
+	('MJ150', 'Roust Nioten', '2010-01-08', 'Gabon'),
+	('AS151', 'Christina Morty', '1999-05-09', 'Spain'),
+	('DG152', 'Jim Port', '2000-06-10', 'Portugal'),
+	('DT153', 'Paula Crowler', '1977-02-11', 'Ireland'),
+	('DL154', 'Theo Nikelson', '1988-09-24', 'USA'),
+	('UT155', 'Nana Perto', '1959-10-25', 'Spain'),
+	('IT156', 'Vira Written', '1999-11-26', 'Austria'),
+	('PT157', 'George Kitchin', '1999-11-01', 'India'),
+	('HL158', 'Paul Grethor', '1990-12-05', 'Switcherland'),
+	('DL159', 'Martin Papas', '2005-04-08', 'Greece'),
+	('BT160', 'Mary Fiorini', '1969-09-28', 'Malta'),
+	('MP161', 'Steven Klop', '1955-01-14', 'Germany');
+
+INSERT INTO Director (ID, Names, BirthDate, OriginCountry) 
+VALUES	('DT123', 'Miki Franklin', '01-11-99', 'Monaco'),
+	('KT124', 'Paul Portman', '10-06-00', 'USA'),
+	('DO125', 'Siri Bion', '01-11-99', 'Indonesia'),
+	('ZN126', 'Dreyk Grotter', '14-01-69', 'Polland'),
+	('KI127', 'Nikolas Lother', '19-11-55', 'Germany'),
+	('LO128', 'Dina Potter', '15-02-41', 'Great Britain'),
+	('FR129', 'Eren Chion', '16-04-20', 'Moldova'),
+	('BG130', 'Mark Wall', '17-08-74', 'Finland'),
+	('CD131', 'Pio Pepero', '18-03-66', 'Mexico'),
+	('SX132', 'Marion Kotard', '19-09-36', 'France'),
+	('FV133', 'Coty Maru', '20-11-10', 'Great Britain'),
+	('GB134', 'Kim Pinki', '21-03-99', 'China'),
+	('HN135', 'Bessy Kainy', '03-12-00', 'Brazil'),
+	('MP161', 'Steven Klop', '14-01-55', 'Germany'),
+	('IK137', 'Nana Rollarty', '24-10-84', 'Norway'),
+	('RF138', 'Nick Petropoulos', '01-01-59', 'Greece'),
+	('IT156', 'Vira Written', '26-11-99', 'Austria'),
+	('XT140', 'Gene Everton', '27-07-99', 'USA'),
+	('CV141', 'John Hant', '28-06-90', 'Malta'),
+	('DL154', 'Theo Nikelson', '24-09-88', 'USA');
+
+INSERT INTO User (Names, Password, Email, BirthDate, Age) VALUES
+	('marco', '*2345', 'marco@mail.com', '16-04-90', ''),
+	('polo', '3*165', 'polo@mail.com', '23-11-77', ''),
+	('trula', '98*56', 'trula@mail.com', '05-07-80', ''),
+	('prod', '582*4', 'prod@mail.com', '24-09-88', ''),
+	('bitam', '1657*', 'bitam@mail.com', '14-01-55', ''),
+	('richo', '*4651', 'richo@mail.com', '15-02-41', ''),
+	('classico', '5*652', 'classico@mail.com', '18-03-66', ''),
+	('diako', '54*53', 'diako@mail.com', '12-06-05', ''),
+	('troufa', '5@654', 'troufa@mail.com', '20-07-10', ''),
+	('sicki', '546@5', 'sicki@mail.com', '03-03-11', ''),
+	('criday', '5465@', 'criday@mail.com', '02-02-01', ''),
+	('zaxar', '54@57', 'zaxar@mail.com', '10-10-98', ''),
+	('podi', '#4658', 'podi@mail.com', '05-03-11', ''),
+	('kotro', '5#659', 'kotro@mail.com', '29-12-88', ''),
+	('tainia', '54#60', 'tainia@mail.com', '05-01-77', ''),
+	('skino', '546#1', 'skino@mail.com', '08-03-11', ''),
+	('isotr', '5466#', 'isotr@mail.com', '09-09-99', ''),
+	('agerer', '$4663', 'agerer@mail.com', '14-04-00', ''),
+	('heart', '5$664', 'heart@mail.com', '08-09-15', ''),
+	('muscle', '54$65', 'muscle@mail.com', '12-11-11', ''),
+	('ithopio', '546$6', 'ithopio@mail.com', '04-01-90', ''),
+	('tauto', '5466$', 'tauto@mail.com', '24-09-88', ''),
+	('mikro', '5466+', 'mikro@mail.com', '10-06-00', ''),
+	('megalo', '546+9', 'megalo@mail.com', '16-04-90', ''),
+	('avgio', '54+60', 'avgio@mail.com', '17-08-74', ''),
+	('infor', '5+671', 'infor@mail.com', '25-11-11', ''),
+	('amareto', '54672', 'amareto@mail.com', '19-11-02', ''),
+	('koniak', '/4673', 'koniak@mail.com', '20-02-00', ''),
+	('pesto', '5/674', 'pesto@mail.com', '01-05-11', ''),
+	('ntomata', '54/75', 'ntomata@mail.com', '22-11-93', ''),
+	('pizza', '546/6', 'pizza@mail.com', '23-01-94', ''),
+	('graffiti', '5467/', 'graffiti@mail.com', '24-05-95', ''),
+	('dog', '54678', 'dog@mail.com', '25-06-96', ''),
+	('cat', '5-679', 'cat@mail.com', '01-08-97', ''),
+	('ginger', '54-80', 'ginger@mail.com', '20-12-97', ''),
+	('biscuit', '546-1', 'biscuit@mail.com', '07-07-98', ''),
+	('magma', '5468-', 'magma@mail.com', '29-11-85', ''),
+	('mountain', '54683', 'mountain@mail.com', '01-10-11', ''),
+	('spoon', '58462', 'spoon@mail.com', '08-06-01', ''),
+	('blue', '96581', 'blue@mail.com', '26-10-00', ''),
+	('velvet', '96582', 'velvet@mail.com', '03-04-13', ''),
+	('mobilou', '96583', 'mobilou@mail.com', '01-01-59', ''),
+	('minto', '96584', 'minto@mail.com', '27-07-99', ''),
+	('xmas', '96585', 'xmas@mail.com', '24-09-88', ''),
+	('tree', '96586', 'tree@mail.com', '01-11-99', ''),
+	('house', '96587', 'house@mail.com', '04-01-90', ''),
+	('stefano', '96588', 'stefano@mail.com', '24-09-58', ''),
+	('skirt', '96589', 'skirt@mail.com', '09-05-99', ''),
+	('fruitpunch', '96590', 'fruitpunch@mail.com', '08-04-05', ''),
+	('mistako', '96591', 'mistako@mail.com', '28-09-69', ''),
+	('fridger', '96592', 'fridger@mail.com', '24-11-88', '');
+
+
+
+
+INSERT INTO Category (ID, Title) 
+VALUES
+	('F', 'Fantasy'),
+	('C', 'Comedy'),
+	('B', 'Biography'),
+	('D', 'Drama'),
+	('R', 'Romance'),
+	('A', 'Adventure'),
+	('H', 'Historical'),
+	('S', 'Sports');
+
+
+
+
+
+create table Movies(
+ID Int(20) Primary key,
+Title VARCHAR(20) Not Null,
+Date date Not Null,
+Sum VARCHAR(20) Not null,
+Cat VARCHAR(20),
+Foreign key (Cat) references Category(ID));
+
+
+create table MoviesRating(
+Rating Int not null,
+Movie Int Not Null,
+User VARCHAR Not Null,
+Foreign key (Movie) references Movies(ID),
+Foreign key (User) references User(Email));
+
+
+
+
+create table Direction(
+Movie Int ,
+Director VARCHAR ,
+Foreign key (Movie) references Movies(ID),
+Foreign key (Director) references Director(ID));
+
+
+create table Castt(
+Movie Int not null,
+Actor VARCHAR Not Null,
+Foreign key (Movie) references Movies(ID),
+Foreign key (Actor) references Actor(ID));
+
+
+create table History(
+Vdate Date,
+Movies Int Not Null,
+User VARCHAR Not null,
+Foreign key (Movies) references Movies(ID),
+Foreign key (User) references User(Email));
+
+
+INSERT INTO Movies (ID, Title, Date, Sum, Cat) VALUES
+	('1', 'Now you see', '24-09-88', 'Now you see is a movie that shows the way.', 'F'),
+	('2', 'Our family', '18-03-66', 'Our family is a movie that shows the family.', 'C'),
+	('3', 'Dad', '10-10-98', 'Dad is a movie that shows the family.', 'B'),
+	('4', 'Everything', '14-04-00', 'Everything is a movie that shows the world.', 'D'),
+	('5', 'Alone home', '02-03-55', 'Alone home is a movie that shows the loneliness.', 'C'),
+	('6', 'My doctor', '24-09-88', 'My doctor is a movie that shows the medicals.', 'R'),
+	('7', 'Lie and think', '28-09-69', 'Lie and think is a movie that shows the thinking.', 'D'),
+	('8', 'Children playing', '15-02-41', 'Children playing is a movie that shows the childhood.', 'C'),
+	('9', 'Christmas', '19-05-36', 'Christmas is a movie that shows the xmas.', 'C'),
+	('10', 'Create the extraordinary', '28-06-90', 'Create the extraordinary is a movie that shows the creativity.', 'F'),
+	('11', 'Play now', '28-09-69', 'Play now is a movie that shows the playing.', 'A'),
+	('12', 'Bad issues', '12-06-05', 'Bad issues is a movie that shows the problems.', 'H'),
+	('13', 'Protect them', '03-02-20', 'Protect them is a movie that shows the protection.', 'D'),
+	('14', 'Sing together', '08-04-22', 'Sing together is a movie that shows the teams.', 'C'),
+	('15', 'Money', '25-04-19', 'Money is a movie that shows the money.', 'H'),
+	('16', 'Football times', '16-06-05', 'Football times is a movie that shows the sports.', 'S'),
+	('17', 'Running cars', '12-12-99', 'Running cars is a movie that shows the cars.', 'A'),
+	('18', 'Fresh air', '19-10-18', 'Fresh air is a movie that shows the air.', 'B'),
+	('19', 'The tower', '27-06-17', 'The tower is a movie that shows the buildings.', 'A'),
+	('20', 'Olives and bread', '13-03-16', 'Olives and bread is a movie that shows the food.', 'B');
+
+
+INSERT INTO Castt (Movie, Actor) VALUES
+	('1', 'DT123'),
+	('3', 'DT123'),
+	('5', 'DT123'),
+	('7', 'DT123'),
+	('9', 'DT123'),
+	('11', 'DT123'),
+	('13', 'DT123'),
+	('15', 'DT123'),
+	('17', 'DT123'),
+	('19', 'DT123'),
+	('2', 'KT124'),
+	('4', 'KT124'),
+	('6', 'KT124'),
+	('8', 'KT124'),
+	('10', 'KT124'),
+	('12', 'KT124'),
+	('14', 'KT124'),
+	('16', 'KT124'),
+	('18', 'KT124'),
+	('20', 'KT124'),
+	('3', 'DO125'),
+	('6', 'DO125'),
+	('9', 'DO125'),
+	('12', 'DO125'),
+	('15', 'DO125'),
+	('18', 'DO125'),
+	('4', 'ZN126'),
+	('8', 'ZN126'),
+	('12', 'ZN126'),
+	('16', 'ZN126'),
+	('5', 'KI127'),
+	('10', 'KI127'),
+	('15', 'KI127'),
+	('20', 'KI127'),
+	('6', 'LO128'),
+	('12', 'LO128'),
+	('18', 'LO128'),
+	('7', 'FR129'),
+	('14', 'FR129'),
+	('8', 'BG130'),
+	('16', 'BG130'),
+	('9', 'CD131'),
+	('18', 'CD131'),
+	('10', 'SX132'),
+	('20', 'SX132'),
+	('11', 'FV133'),
+	('12', 'GB134'),
+	('13', 'GB134'),
+	('14', 'GB134'),
+	('1', 'HN135'),
+	('13', 'HN135'),
+	('20', 'HN135'),
+	('2', 'JM136'),
+	('14', 'JM136'),
+	('19', 'JM136'),
+	('3', 'IK137'),
+	('15', 'IK137'),
+	('18', 'IK137'),
+	('4', 'RF138'),
+	('16', 'RF138'),
+	('17', 'RF138'),
+	('5', 'YH139'),
+	('16', 'YH139'),
+	('17', 'YH139'),
+	('1', 'XT140'),
+	('3', 'XT140'),
+	('5', 'XT140'),
+	('7', 'XT140'),
+	('9', 'XT140'),
+	('11', 'XT140'),
+	('13', 'XT140'),
+	('15', 'XT140'),
+	('18', 'XT140'),
+	('19', 'XT140'),
+	('2', 'CV141'),
+	('4', 'CV141'),
+	('6', 'CV141'),
+	('8', 'CV141'),
+	('10', 'CV141'),
+	('12', 'CV141'),
+	('14', 'CV141'),
+	('16', 'CV141'),
+	('19', 'CV141'),
+	('20', 'CV141'),
+	('3', 'VB142'),
+	('6', 'VB142'),
+	('9', 'VB142'),
+	('12', 'VB142'),
+	('15', 'VB142'),
+	('20', 'VB142'),
+	('1', 'VP143'),
+	('4', 'VP143'),
+	('8', 'VP143'),
+	('12', 'VP143'),
+	('2', 'RT144'),
+	('5', 'RT144'),
+	('10', 'RT144'),
+	('15', 'RT144'),
+	('20', 'RT144'),
+	('3', 'DT145'),
+	('6', 'DT145'),
+	('12', 'DT145'),
+	('18', 'DT145'),
+	('4', 'EE146'),
+	('7', 'EE146'),
+	('14', 'EE146'),
+	('5', 'TY147'),
+	('8', 'TY147'),
+	('16', 'TY147'),
+	('6', 'JJ148'),
+	('9', 'JJ148'),
+	('18', 'JJ148'),
+	('7', 'YH149'),
+	('10', 'YH149'),
+	('20', 'YH149'),
+	('8', 'MJ150'),
+	('11', 'MJ150'),
+	('9', 'AS151'),
+	('12', 'AS151'),
+	('13', 'AS151'),
+	('14', 'AS151'),
+	('10', 'DG152'),
+	('13', 'DG152'),
+	('20', 'DG152'),
+	('2', 'DT153'),
+	('11', 'DT153'),
+	('19', 'DT153'),
+	('3', 'DL154'),
+	('12', 'DL154'),
+	('18', 'DL154'),
+	('4', 'UT155'),
+	('13', 'UT155'),
+	('16', 'UT155'),
+	('17', 'UT155'),
+	('5', 'IT156'),
+	('14', 'IT156'),
+	('16', 'IT156'),
+	('17', 'IT156'),
+	('15', 'PT157'),
+	('16', 'PT157'),
+	('16', 'HL158'),
+	('17', 'HL158'),
+	('17', 'DL159'),
+	('18', 'DL159'),
+	('18', 'BT160'),
+	('19', 'BT160'),
+	('19', 'MP161'),
+	('20', 'MP161');
+
+INSERT INTO History (Vdate, Movies, User) VALUES
+	('', '1', 'marco@mail.com'),
+	('', '3', 'marco@mail.com'),
+	('', '5', 'marco@mail.com'),
+	('', '7', 'marco@mail.com'),
+	('', '9', 'marco@mail.com'),
+	('', '11', 'marco@mail.com'),
+	('', '13', 'marco@mail.com'),
+	('', '15', 'marco@mail.com'),
+	('', '17', 'marco@mail.com'),
+	('', '19', 'marco@mail.com'),
+	('', '2', 'polo@mail.com'),
+	('', '4', 'polo@mail.com'),
+	('', '6', 'polo@mail.com'),
+	('', '8', 'polo@mail.com'),
+	('', '10', 'polo@mail.com'),
+	('', '12', 'polo@mail.com'),
+	('', '14', 'polo@mail.com'),
+	('', '16', 'polo@mail.com'),
+	('', '18', 'polo@mail.com'),
+	('', '20', 'polo@mail.com'),
+	('', '3', 'trula@mail.com'),
+	('', '6', 'trula@mail.com'),
+	('', '9', 'trula@mail.com'),
+	('', '12', 'trula@mail.com'),
+	('', '15', 'trula@mail.com'),
+	('', '18', 'trula@mail.com'),
+	('', '4', 'prod@mail.com'),
+	('', '8', 'prod@mail.com'),
+	('', '12', 'prod@mail.com'),
+	('', '16', 'prod@mail.com'),
+	('', '5', 'bitam@mail.com'),
+	('', '10', 'bitam@mail.com'),
+	('', '15', 'bitam@mail.com'),
+	('', '20', 'bitam@mail.com'),
+	('', '6', 'richo@mail.com'),
+	('', '12', 'richo@mail.com'),
+	('', '18', 'richo@mail.com'),
+	('', '7', 'classico@mail.com'),
+	('', '14', 'classico@mail.com'),
+	('', '8', 'diako@mail.com'),
+	('', '16', 'diako@mail.com'),
+	('', '9', 'troufa@mail.com'),
+	('', '18', 'troufa@mail.com'),
+	('', '10', 'sicki@mail.com'),
+	('', '20', 'sicki@mail.com'),
+	('', '11', 'criday@mail.com'),
+	('', '12', 'zaxar@mail.com'),
+	('', '13', 'zaxar@mail.com'),
+	('', '14', 'zaxar@mail.com'),
+	('', '1', 'podi@mail.com'),
+	('', '13', 'podi@mail.com'),
+	('', '20', 'podi@mail.com'),
+	('', '2', 'kotro@mail.com'),
+	('', '14', 'kotro@mail.com'),
+	('', '19', 'kotro@mail.com'),
+	('', '3', 'tainia@mail.com'),
+	('', '15', 'tainia@mail.com'),
+	('', '18', 'tainia@mail.com'),
+	('', '4', 'skino@mail.com'),
+	('', '16', 'skino@mail.com'),
+	('', '17', 'skino@mail.com'),
+	('', '5', 'isotr@mail.com'),
+	('', '16', 'isotr@mail.com'),
+	('', '17', 'isotr@mail.com'),
+	('', '1', 'agerer@mail.com'),
+	('', '3', 'agerer@mail.com'),
+	('', '5', 'agerer@mail.com'),
+	('', '7', 'agerer@mail.com'),
+	('', '9', 'agerer@mail.com'),
+	('', '11', 'agerer@mail.com'),
+	('', '13', 'agerer@mail.com'),
+	('', '15', 'agerer@mail.com'),
+	('', '18', 'agerer@mail.com'),
+	('', '19', 'agerer@mail.com'),
+	('', '2', 'heart@mail.com'),
+	('', '4', 'heart@mail.com'),
+	('', '6', 'heart@mail.com'),
+	('', '8', 'heart@mail.com'),
+	('', '10', 'heart@mail.com'),
+	('', '12', 'heart@mail.com'),
+	('', '14', 'heart@mail.com'),
+	('', '16', 'heart@mail.com'),
+	('', '19', 'heart@mail.com'),
+	('', '20', 'heart@mail.com'),
+	('', '3', 'muscle@mail.com'),
+	('', '6', 'muscle@mail.com'),
+	('', '9', 'muscle@mail.com'),
+	('', '12', 'muscle@mail.com'),
+	('', '15', 'muscle@mail.com'),
+	('', '20', 'muscle@mail.com'),
+	('', '1', 'ithopio@mail.com'),
+	('', '4', 'ithopio@mail.com'),
+	('', '8', 'ithopio@mail.com'),
+	('', '12', 'ithopio@mail.com'),
+	('', '2', 'tauto@mail.com'),
+	('', '5', 'tauto@mail.com'),
+	('', '10', 'tauto@mail.com'),
+	('', '15', 'tauto@mail.com'),
+	('', '20', 'tauto@mail.com'),
+	('', '3', 'mikro@mail.com'),
+	('', '6', 'mikro@mail.com'),
+	('', '12', 'mikro@mail.com'),
+	('', '18', 'mikro@mail.com'),
+	('', '4', 'megalo@mail.com'),
+	('', '7', 'megalo@mail.com'),
+	('', '14', 'megalo@mail.com'),
+	('', '5', 'avgio@mail.com'),
+	('', '8', 'avgio@mail.com'),
+	('', '16', 'avgio@mail.com'),
+	('', '6', 'infor@mail.com'),
+	('', '9', 'infor@mail.com'),
+	('', '18', 'infor@mail.com'),
+	('', '7', 'amareto@mail.com'),
+	('', '10', 'amareto@mail.com'),
+	('', '20', 'amareto@mail.com'),
+	('', '8', 'koniak@mail.com'),
+	('', '11', 'koniak@mail.com'),
+	('', '9', 'pesto@mail.com'),
+	('', '12', 'pesto@mail.com'),
+	('', '13', 'pesto@mail.com'),
+	('', '14', 'pesto@mail.com'),
+	('', '10', 'ntomata@mail.com'),
+	('', '13', 'ntomata@mail.com'),
+	('', '20', 'ntomata@mail.com'),
+	('', '2', 'pizza@mail.com'),
+	('', '11', 'pizza@mail.com'),
+	('', '19', 'pizza@mail.com'),
+	('', '3', 'graffiti@mail.com'),
+	('', '12', 'graffiti@mail.com'),
+	('', '18', 'graffiti@mail.com'),
+	('', '4', 'dog@mail.com'),
+	('', '13', 'dog@mail.com'),
+	('', '16', 'dog@mail.com'),
+	('', '17', 'dog@mail.com'),
+	('', '5', 'cat@mail.com'),
+	('', '14', 'cat@mail.com'),
+	('', '16', 'cat@mail.com'),
+	('', '17', 'cat@mail.com'),
+	('', '15', 'ginger@mail.com'),
+	('', '16', 'ginger@mail.com'),
+	('', '16', 'biscuit@mail.com'),
+	('', '17', 'biscuit@mail.com'),
+	('', '17', 'magma@mail.com'),
+	('', '18', 'magma@mail.com'),
+	('', '18', 'mountain@mail.com'),
+	('', '19', 'mountain@mail.com'),
+	('', '19', 'spoon@mail.com'),
+	('', '20', 'spoon@mail.com'),
+	('', '9', 'blue@mail.com'),
+	('', '1', 'velvet@mail.com'),
+	('', '2', 'velvet@mail.com'),
+	('', '3', 'velvet@mail.com'),
+	('', '4', 'velvet@mail.com'),
+	('', '5', 'velvet@mail.com'),
+	('', '6', 'velvet@mail.com'),
+	('', '7', 'velvet@mail.com'),
+	('', '8', 'velvet@mail.com'),
+	('', '9', 'velvet@mail.com'),
+	('', '10', 'velvet@mail.com'),
+	('', '11', 'velvet@mail.com'),
+	('', '12', 'velvet@mail.com'),
+	('', '13', 'velvet@mail.com'),
+	('', '14', 'velvet@mail.com'),
+	('', '15', 'velvet@mail.com'),
+	('', '16', 'velvet@mail.com'),
+	('', '17', 'velvet@mail.com'),
+	('', '18', 'velvet@mail.com'),
+	('', '19', 'velvet@mail.com'),
+	('', '20', 'velvet@mail.com'),
+	('', '2', 'mobilou@mail.com'),
+	('', '4', 'mobilou@mail.com'),
+	('', '6', 'mobilou@mail.com'),
+	('', '7', 'mobilou@mail.com'),
+	('', '8', 'mobilou@mail.com'),
+	('', '10', 'mobilou@mail.com'),
+	('', '12', 'mobilou@mail.com'),
+	('', '14', 'mobilou@mail.com'),
+	('', '16', 'mobilou@mail.com'),
+	('', '19', 'mobilou@mail.com'),
+	('', '20', 'mobilou@mail.com'),
+	('', '6', 'minto@mail.com'),
+	('', '5', 'xmas@mail.com'),
+	('', '4', 'tree@mail.com'),
+	('', '3', 'house@mail.com'),
+	('', '2', 'stefano@mail.com'),
+	('', '1', 'skirt@mail.com'),
+	('', '20', 'fruitpunch@mail.com'),
+	('', '19', 'mistako@mail.com'),
+	('', '18', 'fridger@mail.com');
+
+INSERT INTO MoviesRating (Rating, Movie, User) VALUES
+	('8', '1', 'marco@mail.com'),
+	('9', '2', 'polo@mail.com'),
+	('5', '3', 'trula@mail.com'),
+	('6', '4', 'prod@mail.com'),
+	('4', '5', 'bitam@mail.com'),
+	('7', '6', 'richo@mail.com'),
+	('8', '7', 'classico@mail.com'),
+	('5', '8', 'diako@mail.com'),
+	('3', '9', 'troufa@mail.com'),
+	('10', '10', 'sicki@mail.com'),
+	('5', '11', 'criday@mail.com'),
+	('3', '12', 'zaxar@mail.com'),
+	('5', '13', 'podi@mail.com'),
+	('1', '14', 'kotro@mail.com'),
+	('8', '15', 'tainia@mail.com'),
+	('9', '16', 'skino@mail.com'),
+	('7', '17', 'isotr@mail.com'),
+	('10', '18', 'agerer@mail.com'),
+	('2', '19', 'heart@mail.com'),
+	('9', '20', 'muscle@mail.com'),
+	('1', '1', 'ithopio@mail.com'),
+	('2', '2', 'tauto@mail.com'),
+	('3', '3', 'mikro@mail.com'),
+	('4', '4', 'megalo@mail.com'),
+	('5', '5', 'avgio@mail.com'),
+	('6', '6', 'infor@mail.com'),
+	('7', '7', 'amareto@mail.com'),
+	('8', '8', 'koniak@mail.com'),
+	('9', '9', 'pesto@mail.com'),
+	('10', '10', 'ntomata@mail.com'),
+	('9', '11', 'pizza@mail.com'),
+	('8', '12', 'graffiti@mail.com'),
+	('7', '13', 'dog@mail.com'),
+	('6', '14', 'cat@mail.com'),
+	('5', '15', 'ginger@mail.com'),
+	('4', '16', 'biscuit@mail.com'),
+	('3', '17', 'magma@mail.com'),
+	('2', '18', 'mountain@mail.com'),
+	('1', '19', 'spoon@mail.com'),
+	('7', '20', 'blue@mail.com'),
+	('5', '1', 'velvet@mail.com'),
+	('6', '2', 'mobilou@mail.com'),
+	('3', '3', 'minto@mail.com'),
+	('8', '4', 'xmas@mail.com'),
+	('9', '5', 'tree@mail.com'),
+	('4', '6', 'house@mail.com'),
+	('2', '7', 'stefano@mail.com'),
+	('7', '8', 'skirt@mail.com'),
+	('8', '9', 'fruitpunch@mail.com'),
+	('9', '10', 'mistako@mail.com'),
+	('5', '11', 'fridger@mail.com'),
+	('6', '12', 'marco@mail.com'),
+	('8', '13', 'polo@mail.com'),
+	('7', '14', 'trula@mail.com'),
+	('4', '15', 'prod@mail.com'),
+	('3', '16', 'bitam@mail.com'),
+	('9', '17', 'richo@mail.com'),
+	('5', '18', 'classico@mail.com'),
+	('4', '19', 'diako@mail.com'),
+	('5', '20', 'troufa@mail.com'),
+	('6', '1', 'muscle@mail.com'),
+	('8', '2', 'ithopio@mail.com'),
+	('9', '3', 'tauto@mail.com'),
+	('4', '4', 'mikro@mail.com'),
+	('5', '5', 'megalo@mail.com'),
+	('6', '6', 'avgio@mail.com'),
+	('7', '7', 'infor@mail.com'),
+	('8', '8', 'amareto@mail.com'),
+	('9', '9', 'koniak@mail.com'),
+	('6', '10', 'pesto@mail.com'),
+	('5', '11', 'ntomata@mail.com'),
+	('7', '12', 'pizza@mail.com'),
+	('8', '13', 'graffiti@mail.com'),
+	('5', '14', 'dog@mail.com'),
+	('7', '15', 'cat@mail.com'),
+	('10', '16', 'ginger@mail.com'),
+	('5', '17', 'biscuit@mail.com'),
+	('6', '18', 'magma@mail.com'),
+	('9', '19', 'mountain@mail.com'),
+	('8', '20', 'spoon@mail.com'),
+	('5', '1', 'graffiti@mail.com'),
+	('2', '2', 'dog@mail.com'),
+	('6', '3', 'cat@mail.com'),
+	('7', '4', 'ginger@mail.com'),
+	('4', '5', 'biscuit@mail.com'),
+	('9', '6', 'magma@mail.com'),
+	('3', '7', 'mountain@mail.com'),
+	('5', '8', 'spoon@mail.com'),
+	('4', '9', 'blue@mail.com'),
+	('10', '10', 'velvet@mail.com'),
+	('8', '11', 'mobilou@mail.com'),
+	('5', '12', 'minto@mail.com'),
+	('2', '13', 'xmas@mail.com'),
+	('3', '14', 'tree@mail.com'),
+	('6', '15', 'house@mail.com'),
+	('9', '16', 'stefano@mail.com'),
+	('4', '17', 'skirt@mail.com'),
+	('1', '18', 'fruitpunch@mail.com'),
+	('7', '19', 'mistako@mail.com'),
+	('10', '20', 'fridger@mail.com');
+
+
+INSERT INTO Direction (Movie, Director) VALUES
+	(1, 'DT123'),
+	(5, 'DT123'),
+	(19, 'DT123'),
+	(2, 'KT124'),
+	(3, 'DO125'),
+	(4, 'ZN126'),
+	(5, 'KI127'),
+	(1, 'LO128'),
+	(6, 'LO128'),
+	(7, 'FR129'),
+	(8, 'BG130'),
+	(9, 'CD131'),
+	(10, 'SX132'),
+	(5, 'FV133'),
+	(11, 'FV133'),
+	(12, 'GB134'),
+	(13, 'HN135'),
+	(14, 'MP161'),
+	(15, 'MP161'),
+	(15, 'IK137'),
+	(16, 'RF138'),
+	(3, 'IT156'),
+	(15, 'IT156'),
+	(17, 'IT156'),
+	(18, 'XT140'),
+	(19, 'CV141'),
+	(18, 'DL154'),
+	(20, 'DL154');
+
+
+
+
+
+
+
+
+
+
+/* 1 */
+
+select count(*) as born_after_1990
+ FROM Actor
+ where actor.BirthDate > '1989-12-31';
+
+/* 2 */
+
+
+SELECT Actor.*
+FROM Actor
+INNER JOIN Castt ON Castt.Actor = Actor.ID
+INNER JOIN Movies ON Castt.Movie = Movies.ID
+WHERE Movies.Title = 'Dad';
+
+/* 3 */
+
+Select Actor.Names
+from Actor 
+inner join Director on director.Names=actor.Names;
+
+/* 4 */
+
+select director.ID,director.OriginCountry
+From Director
+inner join Direction on direction.Director = director.ID
+group by direction.Director
+Having count(direction.director) > 1;
+
+/* 5 */
+
+select user.Names
+from user
+inner join MoviesRating on MoviesRating.User=User.Email
+group by User.Email
+Having count(MoviesRating.User)>0;
+
+/* 6 */
+
+Select Movies.Title
+From Movies
+inner join Category on category.ID = Movies.Cat
+where Category.Title='Drama';
+
+/* 7 */
+
+select avg(MoviesRating.Rating) as MovieAverage
+from MoviesRating
+Where moviesRating.Movie='20';
+
+/* 8 */
+
+SELECT 
+    SUM(MovieCount = 1) AS just1,
+    SUM(MovieCount > 8) AS over8
+FROM (
+    SELECT History.User, COUNT(History.Movies) AS MovieCount
+    FROM History
+    GROUP BY History.User
+) 
+WHERE MovieCount = 1 OR MovieCount > 8;
+
+
+
+
+/* 9 */
+
+SELECT DISTINCT user.names    
+FROM user
+INNER JOIN MoviesRating ON Moviesrating.user = user.Email
+LEFT OUTER JOIN history ON user.Email = history.User AND history.Movies = moviesrating.Movie
+WHERE history.Movies IS NULL;
+
+
+/* 10 */
+
+select user.Names,movies.Title
+From History
+inner join user on history.user=user.email
+inner join movies on history.Movies=movies.ID
+left outer join MoviesRating on user.email=moviesrating.user and moviesrating.movie=history.Movies
+WHERE moviesrating.Movie IS NULL;
+
+
