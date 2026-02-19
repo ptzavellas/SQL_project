@@ -72,3 +72,11 @@ Example analyses:
 
 ---
 
+## Key Concepts Demonstrated
+
+- Database normalization
+- Relational schema design
+- Many-to-many relationships
+- Analytical SQL querying
+- Data integrity via constraints
+- Activity and rating analytics
